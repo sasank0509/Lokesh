@@ -1,0 +1,14 @@
+const express = require('express');
+const app = express();
+
+// Handle POST request to add product to cart
+app.post('/add-to-cart', (req, res) => {
+    const productId = req.body.productId;
+    // Logic to add product to cart in the database
+    res.send('Product added to cart');
+});
+
+// Start server
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
